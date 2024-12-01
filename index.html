@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>December 2024</title>
+      <style>
+         canvas {
+            background-color: #BBB;
+            margin: 3px;
+            border-radius: 10px;
+         }
+      </style>
+   </head>
+   <body>
+      <script src="items/star.js"></script>
+      <script>
+         const cellSize = 200;
+
+         const drawItemFunctions = [];
+         drawItemFunctions[1] = drawStar;
+
+         for (let day = 1; day <= 24; day++) {
+            const canvas = document.createElement("canvas");
+            canvas.width = cellSize;
+            canvas.height = cellSize;
+            document.body.appendChild(canvas);
+
+            fillCell(day, canvas);
+         }
+
+         function fillCell(index, canvas) {
+            const ctx = canvas.getContext("2d");
+            const x = canvas.width / 2;
+            const y = canvas.height / 2;
+            const itemSize = canvas.width * 0.6;
+
+            const drawItem = drawItemFunctions[index];
+            const hue = Math.random() * 360;
+            if (drawItem) {
+               drawItem(ctx, x, y, itemSize, hue);
+            } else {
+               drawNumber(ctx, index, x, y, itemSize);
+            }
+         }
+
+         function drawNumber(ctx, value, x, y, size) {
+            ctx.font = size + "px Consolas";
+            ctx.textAlign = "center";
+            ctx.textBaseline = "middle";
+            ctx.fillText(value, x, y);
+         }
+      </script> 
+   </body>
+</html>

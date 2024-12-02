@@ -11,12 +11,16 @@
       </style>
    </head>
    <body>
+      <script src="draw.js"></script>
+
       <script src="items/star.js"></script>
+      <script src="items/ball.js"></script>
       <script>
          const cellSize = 200;
 
          const drawItemFunctions = [];
          drawItemFunctions[1] = drawStar;
+         drawItemFunctions[2] = drawBall;
 
          for (let day = 1; day <= 24; day++) {
             const canvas = document.createElement("canvas");

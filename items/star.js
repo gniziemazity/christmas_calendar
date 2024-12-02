@@ -15,6 +15,6 @@ function drawStar(ctx, x, y, size, hue) {
       const surfaceY = y - Math.cos(angle) * radius;
       ctx.lineTo(surfaceX, surfaceY);
    }
-   ctx.fillStyle = `hsl(${hue}, 100%, 50%)`;
+   ctx.fillStyle = color.normal(hue);
    ctx.fill();
 }

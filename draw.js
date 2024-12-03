@@ -14,6 +14,14 @@ draw.circle = (ctx, x, y, radius, options) => {
    options.strokeStyle && ctx.stroke();
 };
 
+draw.line = (ctx, fromX, fromY, toX, toY, options) => {
+   ctx.beginPath();
+   ctx.moveTo(fromX, fromY);
+   ctx.lineTo(toX, toY);
+   Object.assign(ctx, options);
+   ctx.stroke();
+};
+
 const color = {};
 color.darkest = (hue) => `hsl(${hue}, 100%, 10%)`;
 color.dark = (hue) => `hsl(${hue}, 100%, 30%)`;

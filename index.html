@@ -16,6 +16,7 @@
       <script src="items/star.js"></script>
       <script src="items/ball.js"></script>
       <script src="items/sock.js"></script>
+      <script src="items/cane.js"></script>
       <script>
          const cellSize = 200;
 
@@ -23,6 +24,7 @@
          drawItemFunctions[1] = drawStar;
          drawItemFunctions[2] = drawBall;
          drawItemFunctions[3] = drawSock;
+         drawItemFunctions[4] = drawCane;
 
          for (let day = 1; day <= 24; day++) {
             const canvas = document.createElement("canvas");

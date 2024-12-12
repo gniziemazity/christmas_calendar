@@ -24,6 +24,7 @@
       <script src="items/glove.js"></script>
       <script src="items/candy.js"></script>
       <script src="items/snowFlake.js"></script>
+      <script src="items/sledge.js"></script>
       <script>
          const cellSize = 200;
 
@@ -39,6 +40,7 @@
          drawItemFunctions[9] = drawGlove;
          drawItemFunctions[10] = drawCandy;
          drawItemFunctions[11] = drawSnowFlake;
+         drawItemFunctions[12] = drawSledge;
 
          for (let day = 1; day <= 24; day++) {
             const canvas = document.createElement("canvas");

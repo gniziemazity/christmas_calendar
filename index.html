@@ -33,6 +33,7 @@
       <script src="items/globe.js"></script>
       <script src="items/bells.js"></script>
       <script src="items/snowMan.js"></script>
+      <script src="items/crown.js"></script>
       <script>
          const cellSize = 200;
 
@@ -57,6 +58,7 @@
          drawItemFunctions[18] = drawGlobe;
          drawItemFunctions[19] = drawBells;
          drawItemFunctions[20] = drawSnowMan;
+         drawItemFunctions[21] = drawCrown;
 
          for (let day = 1; day <= 24; day++) {
             const canvas = document.createElement("canvas");

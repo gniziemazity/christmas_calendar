@@ -36,6 +36,7 @@
       <script src="items/crown.js"></script>
       <script src="items/skate.js"></script>
       <script src="items/reindeer.js"></script>
+      <script src="items/christmasTree.js"></script>
       <script>
          const cellSize = 200;
 
@@ -63,6 +64,7 @@
          drawItemFunctions[21] = drawCrown;
          drawItemFunctions[22] = drawSkate;
          drawItemFunctions[23] = drawReindeer;
+         drawItemFunctions[24] = drawChristmasTree;
 
          for (let day = 1; day <= 24; day++) {
             const canvas = document.createElement("canvas");
